@@ -71,15 +71,11 @@ const config: HardhatUserConfig = {
     kovan: createTestnetConfig("kovan"),
     rinkeby: createTestnetConfig("rinkeby"),
     ropsten: createTestnetConfig("ropsten"),
-    polygon_mumbai: {
-      url: process.env.API_URL,
-      accounts: [`0x${process.env.PRIVATE_KEY}`]
-   }
   },
   solidity: {
     compilers: [
       {
-        version: "0.8.6",
+        version: "0.8.13",
       },
     ],
   },

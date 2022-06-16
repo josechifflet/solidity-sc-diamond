@@ -1,12 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "resolveJsonModule": true
+    "rootDirs": [
+      "./src",
+      "./scripts",
+      "./test"
+    ],
+    "esModuleInterop": true
   },
-  "include": ["./scripts", "./test"],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "include": [
+    "./test",
+    "./src",
+    "./scripts"
+  ],
   "files": ["./hardhat.config.ts"]
 }
